@@ -340,6 +340,7 @@ configure([rootProject] + javaProjects) { project ->
 	checkstyle {
 		toolVersion = "8.41"
 		configDirectory.set(rootProject.file("src/checkstyle"))
+		ignoreFailures true
 	}
 
 	dependencies {
