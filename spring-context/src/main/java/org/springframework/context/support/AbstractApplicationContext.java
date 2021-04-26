@@ -555,6 +555,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 			// Prepare the bean factory for use in this context.
 			prepareBeanFactory(beanFactory);
 
+			// 这时所有的BeanDefinition都已经加载完了，但是没有进行实例化
 			try {
 				// Allows post-processing of the bean factory in context subclasses.
 				postProcessBeanFactory(beanFactory);

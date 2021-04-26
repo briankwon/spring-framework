@@ -88,8 +88,12 @@ public class AnnotationConfigApplicationContext extends GenericApplicationContex
 	 * {@link Configuration @Configuration} classes
 	 */
 	public AnnotationConfigApplicationContext(Class<?>... componentClasses) {
+		// 初始化reader和scanner
+		// todo 仔细了解
 		this();
+		// 其他
 		register(componentClasses);
+		// *重要*  完成了整个Spring生命周期的初始化（？）
 		refresh();
 	}
 
